@@ -1,4 +1,8 @@
-<button {{action "toggle"}}>AddBook</button>
+<div class="d-flex col-xl-6 justify-content-around">
+  <button class="btn btn-primary" {{action "toggle"}}>AddBook</button>
+  <button class="btn btn-danger" {{action "books"}}>List of Books Category</button>
+</div>
+<br>
   {{#if isExpanded}}
     <AddBook @expand={{isExpanded}}/>
   {{/if}}

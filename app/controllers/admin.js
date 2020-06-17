@@ -5,6 +5,7 @@ export default Controller.extend({
     actions:{
         toggle(){
             this.toggleProperty("isExpanded");
-        }
+        },
+        books(){this.transitionToRoute("bookslist")}
     },
 });

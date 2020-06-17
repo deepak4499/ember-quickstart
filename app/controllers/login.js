@@ -3,11 +3,12 @@ import {inject as service} from '@ember/service';
 
 export default Controller.extend({
     store:service(),
+    userdetail:service(),
     userName:null,
     password:null,
     actions:{
         login(){
-            window.alert(this.userName);
+            this.userdetail.newuser(this.userName);
             this.store.query("signin",{
             filter:{
                 userName:this.userName,
@@ -29,8 +30,8 @@ export default Controller.extend({
                     else{
                         window.alert("username or password is incorrect.please try again")
                     }
-            })
-            });   
+                })
+            });
         }
     },
 });

@@ -1,9 +1,12 @@
-<ul>
+<br>
+<div>
   {{#each this.books as |book|}}
-    <li>{{book.bookName}}</li>
-    <li>{{book.author}}</li>
-    <button {{action "buythebook"}}>buy this book</button>
+    <div class="mx-2 border border-success p-3">
+      <p class="mx-4">Book Name :  {{book.bookName}}</p>
+      <p class="mx-4">Author    :  {{book.author}}</p>
+      <button class="mx-4" {{action "buythebook"}}>buy this book</button>
+    </div>
   {{/each}}
-</ul>
-<button {{action "add"}}>AddBook</button>
+</div>
+<br>
 {{yield}}
