@@ -1,0 +1,12 @@
+<ul>
+  {{#each this.model.photo as |title index|}}
+    <li><LinkTo @route="photos.edit" @model={{index}} preventDefault="false">{{title}}</LinkTo></li>
+  {{/each}}
+</ul>
+<p>
+  <LinkTo @route="photos.edit" @model={{this.model.link_id}} class="btn btn-primary">Edit this photo</LinkTo>
+</p>
+<p><LinkTo @route="photos.edit.comments" @models={{array 5 this.model.comment_id}} @replace={{true}} preventDefault="false">{{this.model.comment}}</LinkTo></p>
+<p><LinkTo @route="photos.edit.comments" @models={{array 8 this.model.comment_id}} @query={{hash direction="asc"}}>Sort</LinkTo></p>
+
+{{outlet}}

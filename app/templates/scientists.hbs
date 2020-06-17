@@ -1,0 +1,12 @@
+
+<PeopleList @title="List of Scientists" @people={{this.model.people}}/>
+<TodoList/>
+<FooDidRenderExample/>
+<p>Total:{{sum (multiply 2 5) 3}}</p>
+  {{#each this.person as |persons|}}
+    <p>{{get persons persons.firstName}}</p>
+  {{/each}}
+<p>{{make-bold this.model.check}}</p>
+{{this.model.date}}
+{{format-date-and-time this.model.date}}
+{{outlet}}

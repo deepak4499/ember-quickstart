@@ -1,0 +1,38 @@
+<NameEditor autofocus required type="checkbox"/>
+<div>
+  <img src={{this.model.logoUrl}} alt="bulb-img" draggable="true">
+</div>
+<input type="checkbox" disabled={{this.model.isFueled}} checked>
+<div>
+  {{if this.model.vehicle (if this.model.isFueled "zoooom")}}
+</div>
+  {{this.model.vehicles.cars}}
+  {{#if this.person}}
+    Welcome back,<b> {{this.model.person.firstName}} {{this.model.person.lastName}}</b>!
+  {{else if this.model.person}}
+    Please login
+  {{/if}}
+<ul>
+  {{#each this.model.nameArray as |person index|}}
+    <li>hello,{{person}} you are in the {{index}}</li>
+  {{else}}
+    <p>no one else</p>
+  {{/each}}
+</ul>
+<ul>
+  {{#each-in this.model.vehicle as |title products|}}
+    <li>{{title}}</li>
+    <ol>
+      {{#each products as |product|}}
+        <li>{{product}}</li>
+      {{/each}}
+    </ol>
+  {{/each-in}}
+</ul>
+  {{#if this.isExpanded}}
+    <button {{action "toggleBody"}}>HideBody</button>
+    <div>{{this.model.msg}}</div>
+  {{else}}
+    <button {{action "toggleBody"}}>showBody</button>
+  {{/if}}
+{{outlet}}

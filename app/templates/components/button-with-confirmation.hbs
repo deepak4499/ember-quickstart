@@ -1,0 +1,8 @@
+<button {{action "launchConfirmDialog"}}>{{this.text}}</button>
+  {{#if this.confirmShown}}
+    <div>
+        <button {{action "submitConfirm"}}>OK</button>
+        <button {{action "cancelConfirm"}}>Cancel</button>
+    </div>
+  {{/if}}
+{{yield}}

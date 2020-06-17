@@ -1,0 +1,10 @@
+<p>{{newvalue1}}</p>
+<ul>
+  {{#each people as |person|}}
+    <p>Hello, {{person.name}}</p>
+    <Input @type="text" @value={{person.id}}/>
+    <button {{action "update" person}}>edit</button>
+    {{newvalue}}
+  {{/each}}
+</ul>
+{{yield}}

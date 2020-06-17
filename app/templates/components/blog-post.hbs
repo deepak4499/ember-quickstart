@@ -1,0 +1,30 @@
+<ul class="errors">
+  {{#each this.errors as |error|}}
+    <li>{{error.message}}</li>
+  {{/each}}
+</ul>
+<fieldset class="margin:4px">
+  <label for="name">Name</label>
+  <Input @id="name" @name="user.name" @value={{this.name}} @change={{action "required"}} />
+  <br>
+  <label for="department">Department</label>
+  <Input @id="department" @name="user.department" @value={{this.department}} @change={{action "required"}} />
+  <br>
+  <label for="email">Email</label>
+  <Input @id="email" @name="user.email" @value={{this.email}} @change={{action "required"}} />
+  <br>
+  {{input type="text" value=classchange}}
+  <button {{action "changeclass" classchange}}>change</button>
+  <Input @value={{this.updat}}/>
+</fieldset>
+<ul>
+  {{#each this.fruits as |fruit|}}
+    <li>{{fruit}}</li>
+  {{/each}}
+</ul>
+  {{#if this.fruits}}
+    <button {{action "removefruit"}}>Remove</button>
+    <SinglePost/>
+  {{/if}}
+<p>{{this.class1}}</p>
+{{yield}}

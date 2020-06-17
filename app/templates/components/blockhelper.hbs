@@ -1,0 +1,15 @@
+<p>hiii block message</p>
+<p>{{post.author}}</p>
+<p>
+  hiii<br>
+  {{#let (concat this.firstName this.lastName)
+    as |fullName|
+  }}
+    Welcome back {{fullName}}<br>
+
+    Account Details:<br>
+    First Name: {{this.firstName}}<br>
+    Last Name: {{this.lastName}}
+  {{/let}}
+</p>
+{{yield}}

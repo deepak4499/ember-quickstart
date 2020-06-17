@@ -1,0 +1,22 @@
+<p>
+  hiii<br>
+  {{#let (concat this.model.person.firstName this.model.person.lastName)
+    as |fullName|
+  }}
+    Welcome back {{fullName}}<br>
+
+    Account Details:<br>
+    First Name: {{this.model.person.firstName}}<br>
+    Last Name: {{this.model.person.lastName}}
+  {{/let}}
+</p>
+<p>{{this.model.post.componentName}}</p>
+<ul>
+  {{#each this.model.post as |post|}}
+    <Blockhelper @post={{post}}><p>hiii</p></Blockhelper>
+  {{/each}}
+</ul>
+<BlogPost @updat={{this.model.name}} @fruits={{this.model.arrayOfFruits}}/>
+<SelectedItemList/>
+<UserProfile/>
+{{outlet}}

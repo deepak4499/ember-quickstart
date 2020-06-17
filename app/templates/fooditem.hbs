@@ -1,0 +1,9 @@
+<FooDidRenderExample @people={{array
+   "deepak"
+   "praveen"}}
+/>
+{{outlet}}
+<SinglePost @post={{this.model}} as |head body|>
+  <p>{{head}}</p>
+  <p>{{body}}</p>
+</SinglePost>

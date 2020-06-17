@@ -1,0 +1,8 @@
+<h3>hiii,user!</h3>
+<button {{action "buy"}}>BuyBook</button>
+<p>{{this.buy}}</p>
+  {{#if buy}}
+    <p>hii welcome</p>
+    <BuyBooks @buy={{buy}} @books={{this.model.books}}/>
+  {{/if}}
+{{outlet}}

@@ -1,0 +1,5 @@
+<button {{action "toggle"}}>AddBook</button>
+  {{#if isExpanded}}
+    <AddBook @expand={{isExpanded}}/>
+  {{/if}}
+{{outlet}}

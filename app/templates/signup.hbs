@@ -1,0 +1,12 @@
+<div>
+  <form class="col-sm-10 col-xl-8 mx-3 p-3 border border-primary">
+    <h3 class="text-center">SignUp</h3>
+    <br>
+    <label class="col-sm-3" for="name">UserName</label><Input class="col-sm-6" @id="name" @type="text" @value={{username}} required/>
+    <label class="col-sm-3" for="pwd">Password</label><Input class="col-sm-6" @id="pwd" @type="text" @value={{password}} required/>
+    <label class="col-sm-3" for="cnfm">Confirm Password</label><Input class="col-sm-6" @id="cnfm" @type="password" @value={{confirm}}/>
+    <label class="col-sm-3" for="mail">E-mail</label><Input @id="mail" class="col-sm-6" @type="email" @value={{email}}/>
+    <center><button {{action "sign"}}>SignIn</button></center>
+  </form>
+</div>
+{{outlet}}

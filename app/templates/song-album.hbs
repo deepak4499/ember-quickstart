@@ -1,0 +1,8 @@
+<p>the song-album template rendered here</p>
+<ul>
+  {{#each this.model.bind as |record|}}
+    <li>{{record.title}}</li>
+    <li>{{record.meta}}</li>
+  {{/each}}
+</ul>
+{{outlet}}

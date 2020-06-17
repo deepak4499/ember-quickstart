@@ -1,0 +1,9 @@
+<div>
+  {{#each this.model.books as |book|}}
+    <div class="mx-2 border border-success p-3">
+      <p class="mx-4">Book:  {{book.bookName}}</p>
+      <p class="mx-4">Author:  {{book.author}}</p>
+    </div>
+    <br> 
+  {{/each}}   
+</div>{{outlet}}

@@ -1,0 +1,13 @@
+<h2>{{this.incomplete.length}}</h2>
+<h1>{{this.indexOfSelectedTodo}}</h1>
+<input value={{mut (get this.person this.field)}} onblur={{action "printalert" value="target.value"}}>
+<Input @value={{mut (get this.person this.field)}} onblur={{action "printalert" value="target.value"}}/>
+<Input @value={{ mut this.person.name}} />
+<input value={{this.person.name}} onchange={{action (mut this.person.name) value="target.value"}}>
+<p>{{log "Name is:" this.person.name}}</p>
+<p>{{this.field}}</p>
+<p>{{this.firstName}}</p>
+<label for="firstname">First Name</label>
+<Input @id="firstname" @type="text" @value={{this.firstName}} @key-press={{action "updateFirstName" value="target.value"}} />
+<p>{{this.firstName}}</p>
+{{yield}}

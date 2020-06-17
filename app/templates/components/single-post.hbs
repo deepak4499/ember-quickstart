@@ -1,0 +1,15 @@
+<h1><button {{action "toggleBody" allowedKeys="alt"}}>showBody</button></h1>
+  {{#if this.isShowingBody}}
+    <p>{{this.body}}</p>
+  {{/if}}
+  {{#if (has-block)}}
+    {{yield @post.head @post.body}}
+  {{else}}
+    <h1>{{@post.head}}</h1>
+    <p>{{@post.body}}</p>
+  {{/if}}
+<p><button {{action "select" this.post on="mouseDown"}}>Tick</button>{{this.post.title}}</p>
+<a href="http://localhost:4200/photos" {{action "logClick" preventDefault="false"}}>Go</a>
+<label>what is your Favourite band?</label>
+<input type="text" onblur={{action "bandDidChange" value="target.value"}}>
+<button {{action "next"}}>scientist route</button>
